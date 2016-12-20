@@ -12515,19 +12515,19 @@ var _jquery = require('jquery');
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _remodal = require('remodal');
-
-var _remodal2 = _interopRequireDefault(_remodal);
-
 var _inputmask = require('jquery.inputmask/dist/inputmask/inputmask.js');
 
 var _inputmask2 = _interopRequireDefault(_inputmask);
+
+var _remodal = require('remodal');
+
+var _remodal2 = _interopRequireDefault(_remodal);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 document.addEventListener("DOMContentLoaded", function () {
   var remodalOptions = { hashTracking: false };
-  var $remodalInst = (0, _jquery2.default)('[data-remodal-id=modal]').remodal(remodalOptions);
+  // var $remodalInst = $('[data-remodal-id=modal]').remodal(remodalOptions);
   var $remodalSuccessInst = (0, _jquery2.default)('[data-remodal-id=modal-success]').remodal(remodalOptions);
   var $remodalErrorInst = (0, _jquery2.default)('[data-remodal-id=modal-error]').remodal(remodalOptions);
 
@@ -12563,12 +12563,12 @@ document.addEventListener("DOMContentLoaded", function () {
       data: JSON.stringify({ chat_id: "91466377", text: message }),
       contentType: 'application/json',
       success: function success(msg) {
-        $remodalInst.close();
+        // $remodalInst.close()
         $form[0].reset();
         $remodalSuccessInst.open();
       },
       error: function error(_error) {
-        $remodalInst.close();
+        // $remodalInst.close()
         $remodalErrorInst.open();
       }
     });
